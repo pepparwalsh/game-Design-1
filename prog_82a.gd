@@ -24,8 +24,4 @@ func _on_calculate_pressed():
 func _on_clear_pressed():
 	$lblOut.text = ""
 	
-
-
-func _on_exit_pressed():
-	get_tree().quit()
 	

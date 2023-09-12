@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://xnbleif1omxw"]
+[gd_scene load_steps=3 format=3 uid="uid://xnbleif1omxw"]
+
+[ext_resource type="Script" path="res://prog_93a.gd" id="1_t2ej5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5w3mt"]
 font_size = 24
@@ -8,8 +10,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t2ej5")
 
 [node name="calculate" type="Button" parent="."]
 layout_mode = 0
@@ -41,7 +46,7 @@ offset_left = 34.0
 offset_top = 32.0
 offset_right = 280.0
 offset_bottom = 107.0
-text = "Kw used:"
+text = "Kilowatt used:"
 label_settings = SubResource("LabelSettings_5w3mt")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -52,3 +57,10 @@ offset_left = 302.0
 offset_top = 24.0
 offset_right = 545.0
 offset_bottom = 107.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 210.0
+offset_right = 770.0
+offset_bottom = 435.0
