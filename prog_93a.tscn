@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://xnbleif1omxw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5w3mt"]
+font_size = 24
+
+[node name="prog93a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="calculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 541.0
+offset_right = 287.0
+offset_bottom = 635.0
+text = "Calculate"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 541.0
+offset_right = 820.0
+offset_bottom = 633.0
+text = "Exit"
+
+[node name="Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 540.0
+offset_right = 554.0
+offset_bottom = 635.0
+text = "Clear"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 32.0
+offset_right = 280.0
+offset_bottom = 107.0
+text = "Kw used:"
+label_settings = SubResource("LabelSettings_5w3mt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 24.0
+offset_right = 545.0
+offset_bottom = 107.0

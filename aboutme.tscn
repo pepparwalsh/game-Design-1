@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciijgfj7p04ku"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ohxw"]
+font_size = 44
+font_color = Color(0, 0.670588, 0.0705882, 1)
+
+[node name="aboutme" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 61.0
+offset_right = 933.0
+offset_bottom = 310.0
+text = "About Me!"
+label_settings = SubResource("LabelSettings_0ohxw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 354.0
+offset_right = 805.0
+offset_bottom = 553.0
+text = "next>>>>"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 357.0
+offset_right = 361.0
+offset_bottom = 444.0
+text = "clear"

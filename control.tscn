@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://blmmmaneywska"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 89.0
+offset_right = 697.0
+offset_bottom = 201.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 229.0
+offset_right = 919.0
+offset_bottom = 341.0
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 390.0
+offset_right = 591.0
+offset_bottom = 502.0

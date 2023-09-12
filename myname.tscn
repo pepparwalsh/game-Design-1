@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj5hto35ute1g"]
+
+[ext_resource type="Script" path="res://myname.gd" id="1_fl6wm"]
+
+[node name="myname" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fl6wm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.094
+anchor_top = 0.853
+anchor_right = 1.094
+anchor_bottom = 0.853
+offset_left = -991.288
+offset_top = -452.744
+offset_right = -513.288
+offset_bottom = -249.744
+grow_horizontal = 2
+grow_vertical = 2
+text = "HELLO"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 408.0
+offset_right = 852.0
+offset_bottom = 505.0
+text = "click"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 532.0
+offset_right = 852.0
+offset_bottom = 629.0
+text = "clicl"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
