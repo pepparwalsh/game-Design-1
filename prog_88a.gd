@@ -53,5 +53,9 @@ func _on_exit_pressed():get_tree().quit()
 
 
 
-func 
+	
+
+
+func _on_clear_pressed():
+	$lblOut.text = ""
 	

@@ -82,4 +82,5 @@ offset_bottom = 631.0
 text = "Exit"
 
 [connection signal="pressed" from="Calculate" to="." method="_on_calculate_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
