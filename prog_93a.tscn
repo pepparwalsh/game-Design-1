@@ -51,7 +51,7 @@ label_settings = SubResource("LabelSettings_5w3mt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="Line1" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 302.0
 offset_top = 24.0
@@ -64,3 +64,7 @@ offset_left = 66.0
 offset_top = 210.0
 offset_right = 770.0
 offset_bottom = 435.0
+
+[connection signal="pressed" from="calculate" to="." method="_on_calculate_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
