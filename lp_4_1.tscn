@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3pa4xuk2rcs8"]
+
+[ext_resource type="Script" path="res://LP4-1.gd" id="1_ifpng"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6506b"]
+font_size = 25
+
+[node name="LP4-1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ifpng")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 31.0
+offset_right = 313.0
+offset_bottom = 94.0
+text = "Enter number of copies:"
+label_settings = SubResource("LabelSettings_6506b")
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 163.0
+offset_right = 833.0
+offset_bottom = 472.0
+
+[node name="txtCopies" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 17.0
+offset_right = 684.0
+offset_bottom = 103.0
+
+[node name="Calculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 550.0
+offset_right = 331.0
+offset_bottom = 616.0
+text = "Calculate"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 550.0
+offset_right = 982.0
+offset_bottom = 616.0
+text = "Exit"
+
+[node name="Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 547.0
+offset_right = 659.0
+offset_bottom = 613.0
+text = "Clear"
+
+[connection signal="pressed" from="Calculate" to="." method="_on_calculate_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
