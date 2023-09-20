@@ -12,7 +12,13 @@ func _process(delta):
 
 
 func _on_calculate_pressed():
-	var 
+	var Weight = int($txtWeight.text)
+	var Width = int($txtWidth.text)
+	var Height = int($txtHeight.text)
+	var Length = int($txtLength.text)
+	var Size = Height*Width*Length
+	if 
+	
 	
 
 
