@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://s74a7maoj74y"]
+
+[ext_resource type="Script" path="res://RandomNum.gd" id="1_mfg6o"]
+
+[node name="RandomNum" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mfg6o")
+
+[node name="Calculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 346.0
+offset_right = 613.0
+offset_bottom = 508.0
+text = "Calculate"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 43.0
+offset_right = 576.0
+offset_bottom = 242.0
+
+[connection signal="pressed" from="Calculate" to="." method="_on_calculate_pressed"]
