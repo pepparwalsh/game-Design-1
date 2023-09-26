@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1s6muwruauja"]
+
+[ext_resource type="Script" path="res://prog_122A.gd" id="1_c5edp"]
+
+[node name="prog_122A" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c5edp")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 48.0
+offset_right = 1104.0
+offset_bottom = 431.0
+
+[node name="Calculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 483.0
+offset_right = 325.0
+offset_bottom = 612.0
+text = "Calculate"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 495.0
+offset_right = 678.0
+offset_bottom = 598.0
+text = "Exit"
+
+[node name="Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 495.0
+offset_right = 959.0
+offset_bottom = 598.0
+text = "Clear"
+
+[connection signal="pressed" from="Calculate" to="." method="_on_calculate_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
