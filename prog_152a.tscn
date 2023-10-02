@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3bqjbtopjybs"]
+
+[ext_resource type="Script" path="res://prog_152a.gd" id="1_5jkbb"]
+
+[node name="prog_152a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jkbb")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 40.0
+offset_right = 1065.0
+offset_bottom = 380.0
+
+[node name="Claculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 409.0
+offset_right = 332.0
+offset_bottom = 482.0
+text = "Calculate"
+
+[node name="clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 409.0
+offset_right = 686.0
+offset_bottom = 482.0
+text = "Clear"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 409.0
+offset_right = 1053.0
+offset_bottom = 482.0
+text = "exit"
+
+[connection signal="pressed" from="Claculate" to="." method="_on_claculate_pressed"]
+[connection signal="pressed" from="clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

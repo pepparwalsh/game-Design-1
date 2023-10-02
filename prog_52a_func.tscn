@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://l7xama6b5nl8"]
+
+[ext_resource type="Script" path="res://prog_52aFunc.gd" id="1_a6s28"]
+
+[node name="prog_52aFunc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a6s28")
+
+[node name="txtLen" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 30.0
+offset_right = 467.0
+offset_bottom = 163.0
+
+[node name="txtWid" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 27.0
+offset_right = 1061.0
+offset_bottom = 160.0
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 204.0
+offset_right = 910.0
+offset_bottom = 463.0
+
+[node name="Claculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 529.0
+offset_right = 293.0
+offset_bottom = 628.0
+text = "Claculate"
+
+[node name="Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 531.0
+offset_right = 706.0
+offset_bottom = 630.0
+text = "Clear"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 826.0
+offset_top = 525.0
+offset_right = 1093.0
+offset_bottom = 624.0
+text = "Exit"
+
+[connection signal="pressed" from="Claculate" to="." method="_on_claculate_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

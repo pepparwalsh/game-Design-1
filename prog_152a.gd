@@ -14,17 +14,18 @@ func _process(delta):
 func _on_clear_pressed():
 	$ItemList.clear()
 	
+	
+func _on_claculate_pressed():
+	var Sum = 0
+	var lcv = 3
+	while lcv <= 9669:
+		Sum += lcv
+		$ItemList.add_item(str(Sum))
+		lcv += 3
+		
+	
+
 
 func _on_exit_pressed():
 	get_tree().quit()
 	
-
-func _on_claculate_pressed():
-	$ItemList.add_item("")
-	for num in range(1, 20+1):
-		var numsquared = num*num
-		var squareroot = sqrt(num)
-		var Cubed = num**3
-		var fourthRoot = num**0.25
-		var line = "%d   %d   %.4f   %d   %.4f" % [num, numsquared, squareroot, Cubed, fourthRoot ]
-		$ItemList.add_item(line)
