@@ -27,7 +27,7 @@ func _on_calculate_pressed():
 
 
 func _on_clear_pressed():
-	$Itemlist.Clear()
+	$ItemList.clear()
 	
 	
 func _on_exit_pressed():

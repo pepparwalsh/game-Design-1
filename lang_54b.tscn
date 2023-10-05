@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbqubvgaidnjw"]
+
+[ext_resource type="Script" path="res://Lang_54b.gd" id="1_hc63f"]
+
+[node name="Lang_54b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hc63f")
+
+[node name="line1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 41.0
+offset_right = 367.0
+offset_bottom = 130.0
+
+[node name="line2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 165.0
+offset_right = 365.0
+offset_bottom = 254.0
+
+[node name="line3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 282.0
+offset_right = 366.0
+offset_bottom = 371.0
+
+[node name="line4" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 406.0
+offset_right = 369.0
+offset_bottom = 495.0
+
+[node name="Calculate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 412.0
+offset_right = 675.0
+offset_bottom = 485.0
+text = "Claculate"
+
+[node name="Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 407.0
+offset_right = 929.0
+offset_bottom = 480.0
+text = "Clear"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 520.0
+offset_right = 800.0
+offset_bottom = 593.0
+text = "exit"
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 30.0
+offset_right = 1121.0
+offset_bottom = 355.0
+
+[connection signal="pressed" from="Calculate" to="." method="_on_calculate_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
