@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_clear_pressed():
-	$lblOut.clear()
+	$lblOut.text=""
 	
 	
 func _on_exit_pressed():
@@ -29,6 +29,7 @@ func _on_calculate_pressed():
 	var four = int($line4.text)
 	var sum = one + two + three + four
 	var ave = sum/4 
-	$lblout.text = " sum= %d \n ave = %d " % [sum, ave]
+	$lblOut.text = " sum= %d \n ave = %d " % [sum, ave]
+	
 	
 	
