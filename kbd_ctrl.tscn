@@ -73,9 +73,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="kbdplayer" parent="." instance=ExtResource("2_pfntc")]
 
-[node name="kbdplayer2" parent="." instance=ExtResource("2_pfntc")]
-position = Vector2(194, 53)
-
 [connection signal="mouse_entered" from="interact" to="." method="_on_interact_mouse_entered"]
 [connection signal="button_down" from="draggable/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="draggable/Button" to="." method="_on_button_button_up"]
