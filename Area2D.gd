@@ -9,7 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+@export var next_level = ""
 
 func _on_body_entered(body):
 	if body.name == "kbdplayer":
 		OS.alert("POOP!!!!")
+		var lvl = "res://" + next_level + ".tscn"
+		get_tree().change_scene_to_file(lvl)
+		

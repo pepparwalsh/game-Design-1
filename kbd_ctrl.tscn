@@ -76,6 +76,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="poop" parent="." instance=ExtResource("4_ljmix")]
 position = Vector2(1864, 137)
+next_level = "kbd_world_2"
 
 [connection signal="mouse_entered" from="interact" to="." method="_on_interact_mouse_entered"]
 [connection signal="button_down" from="draggable/Button" to="." method="_on_button_button_down"]
