@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://cjnpsm7otcpy2"]
+[gd_scene load_steps=26 format=3 uid="uid://cjnpsm7otcpy2"]
 
 [ext_resource type="Script" path="res://TDplayer.gd" id="1_p3ntv"]
 [ext_resource type="Texture2D" uid="uid://cmmerde23i0qu" path="res://icon.svg" id="1_pn1q7"]
 [ext_resource type="Texture2D" uid="uid://dt5xjru134kbr" path="res://assests/gfx/NPC_test.png" id="3_mnxr1"]
 [ext_resource type="Texture2D" uid="uid://bh8vcewknkqji" path="res://assests/gfx/Overworld.png" id="4_6wxm2"]
 [ext_resource type="PackedScene" uid="uid://bcoypc4ue4d4d" path="res://player_hud.tscn" id="5_rduut"]
+[ext_resource type="PackedScene" uid="uid://cxex3c7l3m475" path="res://coin.tscn" id="6_u4l78"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_orq13"]
 radius = 9.0
@@ -3428,3 +3429,21 @@ layer_0/tile_data = PackedInt32Array(196620, 1441792, 9, 262156, 1441792, 10, 19
 
 [node name="PlayerHUD" parent="." instance=ExtResource("5_rduut")]
 visible = false
+
+[node name="Coin" parent="." instance=ExtResource("6_u4l78")]
+position = Vector2(-56, -44)
+
+[node name="Coin2" parent="." instance=ExtResource("6_u4l78")]
+position = Vector2(46, 40)
+
+[node name="Coin3" parent="." instance=ExtResource("6_u4l78")]
+position = Vector2(-153, 125)
+
+[node name="Coin4" parent="." instance=ExtResource("6_u4l78")]
+position = Vector2(81, 159)
+
+[node name="Coin5" parent="." instance=ExtResource("6_u4l78")]
+position = Vector2(141, -50)
+
+[node name="Coin6" parent="." instance=ExtResource("6_u4l78")]
+position = Vector2(267, -110)
