@@ -20,6 +20,7 @@ var menu_instance = null
 
 func pickup_money(value):
 	data.money += value
+	
 
 func _ready():
 	p_HUD.show()
