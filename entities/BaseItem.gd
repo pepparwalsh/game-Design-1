@@ -26,12 +26,11 @@ func _init(default_value: int = 1):
 
 func _process(delta):
 	for Player in get_tree().get_nodes_in_group("Player"):
-		if $Area2D .overLaps_body(Player):
+		if $Area2D .overlaps_body(Player):
 			interact(Player)
 	current_time += delta # handle despawn flickering
 	if current_time >= flicker_start_time and current_time <= time_to_despawn:
 		$AnimatedSprite2D.visible = fmod(current_time, flicker_interval) < (flicker_interval / 2)
-		
 	if current_time >= time_to_despawn:
 		remove()
 	pass

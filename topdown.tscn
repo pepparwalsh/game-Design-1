@@ -3334,7 +3334,6 @@ sources/0 = SubResource("TileSetAtlasSource_756ys")
 
 [node name="TDplayer" type="CharacterBody2D" parent="." groups=["Player"]]
 script = ExtResource("1_p3ntv")
-data = null
 
 [node name="Sprite2D" type="Sprite2D" parent="TDplayer"]
 visible = false
