@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://wlsmq6etwf74"]
+
+[ext_resource type="Script" path="res://TDenemy.gd" id="1_v3cxl"]
+[ext_resource type="Texture2D" uid="uid://l5oarl1o3jen" path="res://assests/gfx/log.png" id="2_7wyva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmn6t"]
+size = Vector2(13, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbhxf"]
+size = Vector2(17, 22)
+
+[node name="TDenemy" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_v3cxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_fmn6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7wyva")
+hframes = 6
+vframes = 4
+frame = 18
+
+[node name="AttackBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_fbhxf")
+debug_color = Color(0.996078, 0, 0.180392, 0.419608)
+
+[node name="RayCast2DR" type="RayCast2D" parent="."]
+target_position = Vector2(-48, -24)
+
+[node name="RayCast2DM" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 0)
+
+[node name="RayCast2DL" type="RayCast2D" parent="."]
+target_position = Vector2(-48, 24)
