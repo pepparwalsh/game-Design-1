@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 100.0  # 80.0
+const SPEED = 70.0  # 80.0
 # const JUMP_VELOCITY = -400.0
 const MAX_OBTAINABLE_HEALTH = 400.0
 
@@ -78,6 +78,25 @@ func _ready():
 	menu_instance = menu_scene.instantiate()
 	get_tree().get_root().add_child.call_deferred(menu_instance)
 	menu_instance.hide()
+
+signal health_depleted
+
+func take_damage(dmg):
+	if damage_lock == 0.0:
+		data.health -= dmg
+		data.state = STATES.DAMAGED
+		damage_lock = 0.5
+		animation_lock = dmg * 0.005
+		# to do damage shader
+		if data.health <= 0:
+			data.state = STATES.DEAD
+			# to do play death animation and sound
+			await get_tree().create_timer(0.5).timeout
+			health_depleted.emit()
+		else:
+			#to do play damage sound
+			pass
+	pass
 
 func _physics_process(delta):
 	animation_lock = max(animation_lock-delta, 0.0)

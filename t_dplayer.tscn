@@ -94,6 +94,11 @@ animations = [{
 "name": &"idle_up",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"slash",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tywup")
@@ -162,7 +167,7 @@ z_index = 1
 position = Vector2(1, -0.999996)
 scale = Vector2(0.984375, 0.96875)
 sprite_frames = SubResource("SpriteFrames_46l4u")
-animation = &"idle_side"
+animation = &"slash"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
