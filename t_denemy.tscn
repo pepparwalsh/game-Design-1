@@ -210,3 +210,5 @@ target_position = Vector2(-48, 24)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8xmx7")
 frame_progress = 0.298495
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

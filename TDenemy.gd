@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 60.0
 var MAX_HEALTH: float = 30.0
 var HEALTH = MAX_HEALTH
 var DAMAGE = 10.0
@@ -23,6 +23,21 @@ var state_direction = [
 	Vector2.ZERO
 ]
 
+var state_animations = [
+	"",
+	"e_walk_up",
+	"e_walk_down",
+	"e_walk_left",
+	"e_walk_right",
+	
+	"e_walk_left",
+	"e_walk_right",
+	
+	"e_walk_left",
+	"e_walk_right",
+	""
+]
+
 var inertia = Vector2()
 var ai_timer_max = 0.5
 var ai_timer = ai_timer_max - randi() % 5
@@ -34,9 +49,41 @@ var money_value = 5.0
 
 signal recovered
 
+@onready var anim_player = $AnimatedSprite2D
 @onready var raycastR = $RayCast2DR
 @onready var raycastM = $RayCast2DM
 @onready var raycastL = $RayCast2DL
+
+
+@onready var aud_player = $AudioStreamPlayer2D
+
+
+
+var drops = ["drop_coin", "drop_heart"]
+var coin_scene = preload("res://entities/coin.tscn")
+var heart_scene = preload("res://entities/mini_heart.tscn")
+var death_sound = preload("res://assests/sounds/enemydeath")
+func vec_offset():
+	return Vector2(randf_range(-10.0, 10.0), randf_range(-10.0, 10.0))
+	
+func drop_scene(item_scene):
+	item_scene.global_position = self.global_position + vec2_offset()
+	get_tree().current_scene.add_child(item_scene)
+	
+func drop_heart():
+	var heart = heart_scene.instantiate()
+	drop_scene(heart)
+	
+func drop_coin():
+	var coin = coin_scene.instantiate()
+	coin.value = money_value
+	drop_scene(coin)
+	
+func drop_item():
+	var num_drops = randi() % 3 + 1
+	for i in range(num_drops):
+		var rnd_drop = drops[randi() % drops.size()]
+		call_defferd(rnd_drop)
 
 func turn_toward_player_location(location: Vector2):
 	# Set the satte to move toward the player
@@ -61,6 +108,11 @@ func take_damage(dmg, attacker=null):
 		animation_lock = 0.2
 		# to do damage intensity and shader
 		if HEALTH <= 0:
+			
+			drop_item()
+			aud_player.stream = death_sound
+			aud_player.play()
+			await aud_player.finished
 			queue_free()
 		else:
 			if attacker != null:
@@ -115,6 +167,14 @@ func _physics_process(delta):
 		velocity = direction * SPEED
 		
 		# TO DO WALK ANIMATION STUFF
+		
+		var animation = state_animations[int(AI_STATE)]
+		if animation and not anim_player.is_playing():
+			anim_player.play(animation)
+			
+		if AI_STATE == STATES.IDLE and anim_player.is_playing():
+			anim_player.stop()
+		
 		velocity += inertia
 		move_and_slide()
 		inertia = inertia.move_toward(Vector2(), delta * 1000.0)
