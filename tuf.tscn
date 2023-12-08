@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://oexfsrp8vtbq"]
+
+[ext_resource type="Texture2D" uid="uid://bbsantfrt43wu" path="res://assests/background3-720.png" id="1_y2j1c"]
+[ext_resource type="Texture2D" uid="uid://bircdveguwldj" path="res://assests/moonflower.png" id="2_d1wtd"]
+[ext_resource type="Texture2D" uid="uid://bairuppybdvvd" path="res://assests/paralaxbg_-_1.png" id="3_jxf48"]
+
+[sub_resource type="TileSet" id="TileSet_moijk"]
+
+[node name="TUF" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_moijk")
+cell_quadrant_size = 17
+format = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background3-720" type="Sprite2D" parent="."]
+position = Vector2(97, -70)
+scale = Vector2(0.938281, 0.925)
+texture = ExtResource("1_y2j1c")
+
+[node name="Moonflower" type="Sprite2D" parent="."]
+position = Vector2(295, 176)
+texture = ExtResource("2_d1wtd")
+
+[node name="Paralaxbg-1" type="Sprite2D" parent="."]
+position = Vector2(-265, 46)
+scale = Vector2(1.33611, 1.19444)
+texture = ExtResource("3_jxf48")

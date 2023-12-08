@@ -61,8 +61,8 @@ signal recovered
 
 var drops = ["drop_coin", "drop_heart"]
 var coin_scene = preload("res://entities/coin.tscn")
-var heart_scene = preload("res://entities/mini_heart.tscn")
-var death_sound = preload("res://assests/sounds/enemydeath")
+var heart_scene = preload()
+var death_sound = preload("res://assests/OnlineSound.net SFX hitHurt.wav")
 func vec_offset():
 	return Vector2(randf_range(-10.0, 10.0), randf_range(-10.0, 10.0))
 	
