@@ -53,21 +53,22 @@ signal recovered
 @onready var raycastR = $RayCast2DR
 @onready var raycastM = $RayCast2DM
 @onready var raycastL = $RayCast2DL
-
-
 @onready var aud_player = $AudioStreamPlayer2D
 
 
 
 var drops = ["drop_coin", "drop_heart"]
 var coin_scene = preload("res://entities/coin.tscn")
-var heart_scene = preload()
+var heart_scene = preload("res://entities/coin.tscn")
 var death_sound = preload("res://assests/OnlineSound.net SFX hitHurt.wav")
+var damage_shader = preload("res://assests/shaders/takedamage.tres")
+
+
 func vec_offset():
 	return Vector2(randf_range(-10.0, 10.0), randf_range(-10.0, 10.0))
 	
 func drop_scene(item_scene):
-	item_scene.global_position = self.global_position + vec2_offset()
+	item_scene.global_position = self.global_position + vec_offset()
 	get_tree().current_scene.add_child(item_scene)
 	
 func drop_heart():
@@ -83,7 +84,7 @@ func drop_item():
 	var num_drops = randi() % 3 + 1
 	for i in range(num_drops):
 		var rnd_drop = drops[randi() % drops.size()]
-		call_defferd(rnd_drop)
+		call_deferred(rnd_drop)
 
 func turn_toward_player_location(location: Vector2):
 	# Set the satte to move toward the player
@@ -106,7 +107,9 @@ func take_damage(dmg, attacker=null):
 		HEALTH -= dmg
 		damage_lock = 0.2
 		animation_lock = 0.2
-		# to do damage intensity and shader
+		var dmg_intensity = clamp(1.0-((HEALTH+0.01)/MAX_HEALTH), 0.1, 0.8)
+		$AnimatedSprite2D.material = damage_shader.duplicate()
+		$AnimatedSprite2D.material.set_shader_parameter("intensity", dmg_intensity)
 		if HEALTH <= 0:
 			
 			drop_item()
@@ -136,6 +139,7 @@ func _physics_process(delta):
 	
 	if animation_lock == 0.0:
 		if AI_STATE == STATES.DAMAGED:
+			$AnimatedSprite2D.material = null
 			AI_STATE = STATES.IDLE
 			recovered.emit()
 		
