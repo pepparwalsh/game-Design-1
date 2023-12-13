@@ -1,8 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://oexfsrp8vtbq"]
+[gd_scene load_steps=17 format=3 uid="uid://oexfsrp8vtbq"]
 
 [ext_resource type="Texture2D" uid="uid://bbsantfrt43wu" path="res://assests/background3-720.png" id="1_y2j1c"]
 [ext_resource type="Texture2D" uid="uid://bircdveguwldj" path="res://assests/moonflower.png" id="2_d1wtd"]
 [ext_resource type="Texture2D" uid="uid://bairuppybdvvd" path="res://assests/paralaxbg_-_1.png" id="3_jxf48"]
+[ext_resource type="Texture2D" uid="uid://dqim5t8fh4lhd" path="res://assests/thorns.png" id="4_x42h4"]
+[ext_resource type="Texture2D" uid="uid://cyw7mt45fcjn0" path="res://assests/Alian Tree.png" id="5_2rnxt"]
+[ext_resource type="Texture2D" uid="uid://cxdcv3xua4p8h" path="res://assests/antenemy_grey_spritesheet.png" id="6_4718n"]
+[ext_resource type="Texture2D" uid="uid://6vw20wa1ksqt" path="res://assests/berry.png" id="7_5dcjg"]
+[ext_resource type="Texture2D" uid="uid://dqolspg0lcfic" path="res://assests/buddha.16x16.png" id="8_spjag"]
+[ext_resource type="Texture2D" uid="uid://b5gck6qu2t7u6" path="res://assests/background01.png" id="9_tgxn8"]
+[ext_resource type="Texture2D" uid="uid://duy7qkdva7iqj" path="res://assests/paralaxbg_-_0.png" id="10_el03w"]
+[ext_resource type="Texture2D" uid="uid://bnufqb3dkia0" path="res://assests/paralaxbg_-_2.png" id="11_7cgv7"]
+[ext_resource type="Texture2D" uid="uid://m5huwuhp42aq" path="res://assests/mines_BG.png" id="12_b66sf"]
+[ext_resource type="Texture2D" uid="uid://b7kb47bc4ewfo" path="res://assests/2.png" id="13_ixblr"]
+[ext_resource type="Texture2D" uid="uid://cctat2dcry28i" path="res://assests/4.png" id="14_rh2qn"]
+[ext_resource type="Texture2D" uid="uid://b78up3tmgprgx" path="res://assests/background.png" id="15_rlik4"]
 
 [sub_resource type="TileSet" id="TileSet_moijk"]
 
@@ -16,20 +28,75 @@ format = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background3-720" type="Sprite2D" parent="."]
-position = Vector2(97, -70)
+position = Vector2(71, -72)
 scale = Vector2(0.938281, 0.925)
 texture = ExtResource("1_y2j1c")
 
 [node name="Moonflower" type="Sprite2D" parent="."]
-position = Vector2(548, 408)
+position = Vector2(671, 334)
 texture = ExtResource("2_d1wtd")
 
 [node name="Paralaxbg-1" type="Sprite2D" parent="."]
-position = Vector2(-265, 46)
-scale = Vector2(1.33611, 1.19444)
+position = Vector2(-851, 154)
+scale = Vector2(1.68264, 1.33194)
 texture = ExtResource("3_jxf48")
 
 [node name="Paralaxbg-2" type="Sprite2D" parent="."]
-position = Vector2(217, 47)
-scale = Vector2(1.33611, 1.19444)
+position = Vector2(-415, 754)
+scale = Vector2(1.79305, 1.39166)
 texture = ExtResource("3_jxf48")
+
+[node name="Thorns" type="Sprite2D" parent="."]
+position = Vector2(407, 186)
+scale = Vector2(2.38542, 2.25)
+texture = ExtResource("4_x42h4")
+
+[node name="AlianTree" type="Sprite2D" parent="."]
+position = Vector2(367, 521)
+texture = ExtResource("5_2rnxt")
+
+[node name="AntenemyGreySpritesheet" type="Sprite2D" parent="."]
+position = Vector2(383, 342)
+scale = Vector2(1.875, 1)
+texture = ExtResource("6_4718n")
+
+[node name="Berry" type="Sprite2D" parent="."]
+position = Vector2(188, 316)
+texture = ExtResource("7_5dcjg")
+
+[node name="Buddha_16x16" type="Sprite2D" parent="."]
+position = Vector2(858, 243)
+texture = ExtResource("8_spjag")
+
+[node name="Background01" type="Sprite2D" parent="."]
+position = Vector2(2047, -85)
+texture = ExtResource("9_tgxn8")
+
+[node name="Paralaxbg-0" type="Sprite2D" parent="."]
+position = Vector2(1380.5, 683.5)
+scale = Vector2(3.94722, 3.68333)
+texture = ExtResource("10_el03w")
+
+[node name="Paralaxbg-3" type="Sprite2D" parent="."]
+position = Vector2(2070, 1409)
+texture = ExtResource("11_7cgv7")
+
+[node name="MinesBg" type="Sprite2D" parent="."]
+position = Vector2(3772, 543)
+scale = Vector2(2.71615, 2.05156)
+texture = ExtResource("12_b66sf")
+
+[node name="2" type="Sprite2D" parent="."]
+modulate = Color(0.785, 0.7, 1, 1)
+position = Vector2(3774, 502.75)
+scale = Vector2(1.35417, 1.28843)
+texture = ExtResource("13_ixblr")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(161, 1490)
+texture = ExtResource("14_rh2qn")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(456, 2794.5)
+scale = Vector2(1.19687, 1.14907)
+texture = ExtResource("15_rlik4")
